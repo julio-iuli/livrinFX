@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.rootController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="livro">
+            <items>
+              <MenuItem mnemonicParsing="false" text="novo" />
+                  <MenuItem mnemonicParsing="false" onAction="#handlePesquisar" text="pesquisar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="configuraçao">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirDono" text="dono" />
+                  <MenuItem mnemonicParsing="false" text="editora" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
