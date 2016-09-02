@@ -18,7 +18,7 @@
             </TableView>
             <HBox layoutX="-88.0" layoutY="169.0" prefHeight="14.0" prefWidth="326.0" spacing="5.0" AnchorPane.leftAnchor="-88.0" AnchorPane.topAnchor="169.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="222.0" />
+                  <TextField fx:id="pesquisaField" prefHeight="25.0" prefWidth="222.0" />
                   <Button mnemonicParsing="false" onAction="#handlePesquisar" text="Pesquisar" />
                </children>
                <padding>
@@ -48,6 +48,11 @@
                   <Label text="Editora" GridPane.rowIndex="2" />
                   <Label text="Ano Publicaçao" GridPane.rowIndex="3" />
                   <Label text="Dono" GridPane.rowIndex="4" />
+                  <Label fx:id="tituloLabel" text="Label" GridPane.columnIndex="1" />
+                  <Label fx:id="autorLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label layoutX="129.0" layoutY="48.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                </children>
             </GridPane>
          </children>

@@ -51,6 +51,22 @@ public class Livro {
 	public void setIdAutor(int idAutor) {idAutorProperty().set(idAutor);}
 	public int getIdAutor() {return idAutorProperty().get();}
 	
+	public static ObservableList<Livro> getListaBD(String search) throws SQLException{
+		ObservableList<Livro> listaBD = FXCollections.observableArrayList();
+		Connection connection = Conexao.getConexao();
+		String sql = "SELECT idlivro, titulo, autor_idautor FROM livro WHERE titulo LIKE";
+		String busca = "'%" + search + "%'";
+		PreparedStatement statement = connection.prepareStatement(sql+busca);
+		ResultSet resultSet = statement.executeQuery();
+		while(resultSet.next()){
+			listaBD.add(new Livro(resultSet.getInt("idlivro"), resultSet.getString("titulo"), resultSet.getInt("autor_idautor")));			
+		}
+		resultSet.close();
+		statement.close();
+		connection.close();
+		return listaBD;
+	}
+	
 	public static ObservableList<Livro> getListaBD() throws SQLException{
 		ObservableList<Livro> listaBD = FXCollections.observableArrayList();
 		Connection connection = Conexao.getConexao();
@@ -65,4 +81,5 @@ public class Livro {
 		connection.close();
 		return listaBD;
 	}
+	
 }
