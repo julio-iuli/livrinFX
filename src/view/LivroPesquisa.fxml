@@ -6,19 +6,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox alignment="CENTER" prefHeight="202.0" prefWidth="497.0" spacing="2.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LivroPesquisaController">
+<HBox alignment="CENTER" prefHeight="450.0" prefWidth="620.0" spacing="2.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LivroPesquisaController">
    <children>
-      <AnchorPane prefHeight="202.0" prefWidth="269.0">
+      <VBox prefHeight="382.0" prefWidth="373.0">
          <children>
-            <TableView fx:id="tabLivro" layoutX="-88.0" prefHeight="162.0" prefWidth="344.0" AnchorPane.bottomAnchor="40.0">
+            <TableView fx:id="tabLivro" layoutX="-88.0" prefHeight="413.0" prefWidth="358.0" AnchorPane.bottomAnchor="40.0">
               <columns>
                 <TableColumn fx:id="colIdLivro" prefWidth="69.0" text="idLivro" />
                 <TableColumn fx:id="colTitulo" prefWidth="273.0" text="titulo" />
               </columns>
             </TableView>
-            <HBox layoutX="-88.0" layoutY="169.0" prefHeight="32.0" prefWidth="344.0" spacing="5.0" AnchorPane.leftAnchor="-88.0" AnchorPane.topAnchor="169.0">
+            <HBox layoutX="-88.0" layoutY="169.0" prefHeight="14.0" prefWidth="326.0" spacing="5.0" AnchorPane.leftAnchor="-88.0" AnchorPane.topAnchor="169.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="166.0" />
+                  <TextField prefHeight="25.0" prefWidth="222.0" />
                   <Button mnemonicParsing="false" onAction="#handlePesquisar" text="Pesquisar" />
                </children>
                <padding>
@@ -26,7 +26,7 @@
                </padding>
             </HBox>
          </children>
-      </AnchorPane>
+      </VBox>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
             <Label layoutX="49.0" layoutY="7.0" text="Detalhes do Livro" />
