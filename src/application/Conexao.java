@@ -11,7 +11,7 @@ public class Conexao {
         Connection conexao  = null;
         try{
             //Class.forName("com.mysql.jdbc.Driver");
-            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/livrin2", "aluno", "123");
+            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/livrin2?autoReconnect=true&useSSL=false", "julio", "juju");
         } catch (Exception e) {
             e.printStackTrace();
         }
